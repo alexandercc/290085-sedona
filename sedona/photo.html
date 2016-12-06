@@ -9,29 +9,27 @@
     <header class="page-header">
       <h1 class="none">Седона</h1>
       <nav class="menu-navigation  menu-navigation--opened  menu-navigation--nojs">
-        <div class="menu-navigation__wrapper">
-          <ul class="menu-navigation__items">
-            <li class="menu-navigation__item  menu-navigation__item-active">
-              <a>Главная</a>
-              <span class="menu-navigation__close  btn">X</span>
-            </li>
-            <li class="menu-navigation__item">
-              <a>Фото и видео</a>
-            </li>
-            <li class="menu-navigation__item">
-              <a>Форма отзыва</a>
-            </li>
-            <li class="menu-navigation__item">
-              <a>HTML Academy</a>
-            </li>
-            <li class="menu-navigation__item  menu-navigation__item-last">
-              <div class="menu-navigation__logo">
-                <img src="http://placehold.it/20x20" alt="Седона" >
-              </div>
-              <span class="menu-navigation__toggle  btn"></span>
-            </li>
-          </ul>
-        </div>
+        <ul class="menu-navigation__items">
+          <li class="menu-navigation__item  menu-navigation__item-active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+          <li class="menu-navigation__item  menu-navigation__item-last">
+            <div class="page-logo">
+              <a href="index.html"><img src="http://placehold.it/20x20" alt="Седона" ></a>
+            </div>
+            <span class="menu-navigation__toggle  btn"></span>
+          </li>
+        </ul>
+        <span class="menu-navigation__close  btn">X</span>
       </nav>
     </header>
 
@@ -41,9 +39,9 @@
       </div>
 
       <section class="pictures">
-        <h1 class="pictures__title">Фото и видео</h1>
-        <p class="pictures__title-description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
-          забыть о политике и экономике.
+        <h2 class="pictures__title">Фото и видео</h2>
+        <p class="pictures__title-description">
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
         </p>
 
         <div class="pictures__items">
@@ -51,7 +49,7 @@
             <div class="pictures__item-logo">
               <img src="http://placehold.it/150x150" alt="Фото 1" >
             </div>
-            <h1 class="pictures__item-pictrue-title">Неродные просторы</h1>
+            <h2 class="pictures__item-pictrue-title">Неродные просторы</h2>
             <p class="pictures__item-author">
               Автор фото: Борис
             </p>
@@ -65,7 +63,7 @@
             <div class="pictures__item-logo">
               <img src="http://placehold.it/150x150" alt="Фото 2" >
             </div>
-            <h1 class="pictures__item-pictrue-title">Местная растительность</h1>
+            <h2 class="pictures__item-pictrue-title">Местная растительность</h2>
             <p class="pictures__item-author">
               Автор фото: Сергей
             </p>
@@ -79,7 +77,7 @@
             <div class="pictures__item-logo">
               <img src="http://placehold.it/150x150" alt="Фото 3" >
             </div>
-            <h1 class="pictures__item-pictrue-title">Дорога на север</h1>
+            <h2 class="pictures__item-pictrue-title">Дорога на север</h2>
             <p class="pictures__item-author">
               Автор фото: Петр
             </p>
@@ -93,7 +91,7 @@
             <div class="pictures__item-logo">
               <img src="http://placehold.it/150x150" alt="Фото 4" >
             </div>
-            <h1 class="pictures__item-pictrue-title">Мост дьявола</h1>
+            <h2 class="pictures__item-pictrue-title">Мост дьявола</h2>
             <p class="pictures__item-author">
               Автор фото: Антон
             </p>
@@ -105,11 +103,18 @@
         </div>
 
         <div class="pictures__video">
-          <h1 class="pictures__video-title">Все еще сомневаетесь?</h1>
-          <p class="pictures__video-description">Смотрите видеопрезентацию и скорее за билетами, пока они не
-            подоражали в очередной раз
+          <h2 class="pictures__video-title">Все еще сомневаетесь?</h2>
+          <p class="pictures__video-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подоражали в очередной раз
           </p>
-          <video class="pictures__video-item"></video>
+          <video class="video-player">
+            <img src="http://placehold.it/150x150" alt="Видео о Седоне" >
+            <div class="video-player__video-progressbar"></div>
+            <div class="video-player__video-controls">
+              <div class="video-player__video-restart"></div>
+              <div class="video-player__video-subtitle_off"></div>
+              <div class="video-player__video-fullscreen_off"></div>
+            </div>
+          </video>
         </div>
       </section>
     </div>

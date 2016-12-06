@@ -9,29 +9,27 @@
     <header class="page-header">
       <h1 class="none">Седона</h1>
       <nav class="menu-navigation  menu-navigation--opened  menu-navigation--nojs">
-        <div class="menu-navigation__wrapper">
-          <ul class="menu-navigation__items">
-            <li class="menu-navigation__item  menu-navigation__item-active">
-              <a>Главная</a>
-              <span class="menu-navigation__close  btn">X</span>
-            </li>
-            <li class="menu-navigation__item">
-              <a>Фото и видео</a>
-            </li>
-            <li class="menu-navigation__item">
-              <a>Форма отзыва</a>
-            </li>
-            <li class="menu-navigation__item">
-              <a>HTML Academy</a>
-            </li>
-            <li class="menu-navigation__item  menu-navigation__item-last">
-              <div class="menu-navigation__logo">
-                <img src="http://placehold.it/20x20" alt="Седона" >
-              </div>
-              <span class="menu-navigation__toggle  btn"></span>
-            </li>
-          </ul>
-        </div>
+        <ul class="menu-navigation__items">
+          <li class="menu-navigation__item  menu-navigation__item-active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="#">Форма отзыва</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+          <li class="menu-navigation__item  menu-navigation__item-last">
+            <div class="page-logo">
+              <a href="index.html"><img src="http://placehold.it/20x20" alt="Седона" ></a>
+            </div>
+            <span class="menu-navigation__toggle  btn"></span>
+          </li>
+        </ul>
+        <span class="menu-navigation__close  btn">X</span>
       </nav>
     </header>
 
@@ -41,78 +39,55 @@
       </div>
 
       <section class="feedback">
-        <h1 class="feedback__title">Оставьте свой отзыв</h1>
-        <p class="feedback__title-description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
-          посещенных вами достопримечательностях
+        <h2 class="feedback__title">Оставьте свой отзыв</h2>
+        <p class="feedback__title-description">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
 
         <form>
           <div class="feedback__items">
-            <div class="feedback__item">
-              <h1 class="feedback__item-title">Представьтесь:</h1>
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Представьтесь:</h2>
+              <label for="firstname">Имя*:</label>
+              <input type="text" placeholder="Петр" required="required" id="firstname" name="firstname">
 
-              <fieldset class="">
-                <label class="">Имя*:</label>
-                <input type="text" placeholder="Петр" required="required" class="">
-              </fieldset>
+              <label for="lastname">Фамилия*:</label>
+              <input type="text" placeholder="Иванов" required="required" id="lastname" name="lastname">
 
-              <fieldset class="">
-                <label class="">Фамилия*:</label>
-                <input type="text" placeholder="Иванов" required="required" class="">
-              </fieldset>
+              <label for="patronomic">Отчетсво:</label>
+              <input type="text" placeholder="Александрович" id="patronomic" name="patronomic">
+            </fieldset>
 
-              <fieldset class="">
-                <label class="">Отчетсво:</label>
-                <input type="text" placeholder="Александрович" class="">
-              </fieldset>
-            </div>
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Контактная информация:</h2>
+              <label for="phone">Контактный телефон*:</label>
+              <input type="text" placeholder="Введите телефон" required="required" id="phone" name="phone">
 
-            <div class="feedback__item">
-              <h1 class="feedback__item-title">Контактная информация:</h1>
+              <label for="email">Электронная почта*:</label>
+              <input type="text" placeholder="Введите e-mail" required="required" id="email" name="email">
+            </fieldset>
 
-              <fieldset class="">
-                <label class="">Контактный телефон*:</label>
-                <input type="text" placeholder="Введите телефон" required="required" class="">
-              </fieldset>
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Ваше общее впечатление:</h2>
+              <input type="radio" checked="checked" name="impression" id="positive" value="1"> <label for="positive">Скорее положительные</label>
+              <input type="radio" name="impression" id="negative" value="2"> <label for="negative">Скорее отрицательные</label>
+              <input type="radio" name="impression" id="neutral" value="3"> <label for="neutral">Затрудняюсь ответить</label>
+            </fieldset>
 
-              <fieldset class="">
-                <label class="">Электронная почта*:</label>
-                <input type="text" placeholder="Введите e-mail" required="required" class="">
-              </fieldset>
-            </div>
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Посещенные <br> достопримечательности:</h2>
+              <input type="checkbox" checked="checked" name="showplace" id="bridge"> <label for="bridge">Мост Дьявола</label>
+              <input type="checkbox" checked="checked" name="showplace" id="park"> <label for="park">Слайд-парк</label>
+              <input type="checkbox" name="showplace" id="mountain"> <label for="mountain">Гора-Колокол</label>
+              <input type="checkbox" name="showplace" id="rock"> <label for="rock">Красные скалы</label>
+            </fieldset>
 
-            <div class="feedback__item">
-              <h1 class="feedback__item-title">Ваше общее впечатление:</h1>
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Опишите свои эмоции:</h2>
 
-              <fieldset class="">
-                <input type="radio" checked="checked" class=""> <span>Скорее положительные</span>
-                <input type="radio" class=""> <span>Скорее отрицательные</span>
-                <input type="radio" class=""> <span>Затрудняюсь ответить</span>
-              </fieldset>
-            </div>
-
-            <div class="feedback__item">
-              <h1 class="feedback__item-title">Посещенные <br> достопримечательности:</h1>
-
-              <fieldset class="">
-                <input type="checkbox" checked="checked" class=""> <span>Мост Дьявола</span>
-                <input type="checkbox" checked="checked" class=""> <span>Слайд-парк</span>
-                <input type="checkbox" class=""> <span>Гора-Колокол</span>
-                <input type="checkbox" class=""> <span>Красные скалы</span>
-              </fieldset>
-            </div>
-
-            <div class="feedback__item">
-              <h1 class="feedback__item-title">Опишите свои эмоции:</h1>
-
-              <fieldset class="">
-                <textarea class="">Опишите подробно все свои восторги</textarea>
-              </fieldset>
-
-              <a class="feedback__send  btn">
-                Отправить отзыв
-              </a>
-            </div>
+              <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+              <input type="submit" class="feedback__send  btn" value="Отправить отзыв">
+            </fieldset>
           </div>
         </form>
       </section>
