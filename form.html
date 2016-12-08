@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма отзыва</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="page-header">
+      <h1 class="none">Седона</h1>
+      <nav class="menu-navigation  menu-navigation--opened  menu-navigation--nojs">
+        <ul class="menu-navigation__items">
+          <li class="menu-navigation__item  menu-navigation__item-active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a>Форма отзыва</a>
+          </li>
+          <li class="menu-navigation__item">
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+          <li class="menu-navigation__item  menu-navigation__item-last">
+            <span class="menu-navigation__toggle  btn"></span>
+          </li>
+        </ul>
+        <span class="menu-navigation__close  btn">X</span>
+      </nav>
+      <div class="page-logo">
+        <a href="index.html"><img src="http://placehold.it/20x20" alt="Седона" ></a>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="page-content__intro">
+        <h2 class="page-content__intro-text">Sedona</h2>
+      </div>
+
+      <section class="feedback">
+        <h2 class="feedback__title">Оставьте свой отзыв</h2>
+        <p class="feedback__title-description">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+
+        <form>
+          <div class="feedback__items">
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Представьтесь:</h2>
+              <div>
+                <label for="firstname">Имя*:</label>
+                <input type="text" placeholder="Петр" required="required" id="firstname" name="firstname">
+              </div>
+
+              <div>
+                <label for="lastname">Фамилия*:</label>
+                <input type="text" placeholder="Иванов" required="required" id="lastname" name="lastname">
+              </div>
+
+              <div>
+                <label for="patronomic">Отчетсво:</label>
+                <input type="text" placeholder="Александрович" id="patronomic" name="patronomic">
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Контактная информация:</h2>
+              <div>
+                <label for="phone">Контактный телефон*:</label>
+                <input type="tel" placeholder="Введите телефон" required="required" id="phone" name="phone">
+              </div>
+
+              <div>
+                <label for="email">Электронная почта*:</label>
+                <input type="email" placeholder="Введите e-mail" required="required" id="email" name="email">
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Ваше общее впечатление:</h2>
+              <div>
+                <input type="radio" checked="checked" name="impression" id="positive"> <label for="positive">Скорее положительные</label>
+                <input type="radio" name="impression" id="negative"> <label for="negative">Скорее отрицательные</label>
+                <input type="radio" name="impression" id="neutral"> <label for="neutral">Затрудняюсь ответить</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Посещенные достопримечательности:</h2>
+              <div>
+                <input type="checkbox" checked="checked" name="showplace[]" id="bridge"> <label for="bridge">Мост Дьявола</label>
+                <input type="checkbox" checked="checked" name="showplace[]" id="park"> <label for="park">Слайд-парк</label>
+                <input type="checkbox" name="showplace[]" id="mountain"> <label for="mountain">Гора-Колокол</label>
+                <input type="checkbox" name="showplace[]" id="rock"> <label for="rock">Красные скалы</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback__item">
+              <h2 class="feedback__item-title">Опишите свои эмоции:</h2>
+
+              <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+              <input type="submit" class="feedback__send  btn" value="Отправить отзыв">
+            </fieldset>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__hastag">
+          #VISITSEDONA
+        </p>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li class="social-link social-link--twitter">Twitter</li>
+            <li class="social-link social-link--facebook">Facebook</li>
+            <li class="social-link social-link--youtube">Youtube</li>
+          </ul>
+        </div>
+        <p class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="#">Разработано</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
