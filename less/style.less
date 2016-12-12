@@ -1,5 +1,5 @@
 body {
-  background: grey;
+  background: @white-color;
   font-size: @body-font-size;
   font-family: @font-name;
 }
@@ -9,10 +9,14 @@ body {
 }
 
 .btn {
-
+  display: block;
+  padding: 20px;
+  text-decoration: none;
 }
 
 @import "variables";
+
+@import "mixins";
 
 @import "blocks/about";
 @import "blocks/booking-form";

@@ -3,11 +3,13 @@
 }
 
 .page-footer__wrapper {
-
+  text-align: center;
+  padding: 20px;
 }
 
 .page-footer__hastag {
-
+  .body-font-title();
+  color: @black-color;
 }
 
 .page-footer__social {
@@ -19,5 +21,18 @@
 }
 
 .page-footer__copyright-link {
+  .body-font();
+  color: @black-color;
+  text-decoration: none;
+  display:inline-block;
 
+  &::after {
+    content: '';
+    position:relative;
+    background: url('../img/logo-htmlacademy.svg') no-repeat right center;
+    width: 27px;
+    height: 34px;
+    display:inline-block;
+    padding-left: 15px;
+  }
 }
