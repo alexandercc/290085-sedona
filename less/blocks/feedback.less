@@ -1,13 +1,16 @@
 .feedback {
-
+  text-align: center;
+  padding: 20px;
 }
 
 .feedback__title {
-
+  .body-font-title();
+  color: @black-color;
 }
 
 .feedback__title-description {
-
+  .body-font();
+  color: @black-color;
 }
 
 .feedback__items {
@@ -15,13 +18,27 @@
 }
 
 .feedback__item {
-
+  text-align: center;
+  padding: 20px;
 }
 
 .feedback__item-title {
-
+  .body-font-title();
+  color: @black-color;
 }
 
 .feedback__send {
+  .body-font();
+  background-color: @button-color;
+  color: @white-color;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  margin: 20px auto;
+}
 
+.feedback__item label {
+  .body-font();
+  color: @black-color;
 }
