@@ -3,22 +3,37 @@
 }
 
 .about__header {
-  display: block;
   height: 389px;
   background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
-  background-size: 100%;
+  background-size: cover, 90%, auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__slogan {
-  text-align: center;
-  padding: 20px;
+  img {
+    width: 320px;
+  }
 }
 
 .about__content {
   display: block;
-  height: 240px;
-  padding: 20px;
+  width: 280px;
+  padding: 40px 20px 20px 20px;
   text-align: center;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 648px;
+    padding: 40px 60px 40px 60px;
+  }
+
+  @media @desktop {
+    width: 800px;
+    padding: 40px 60px 40px 60px;
+  }
 }
 
 .about__content-title {
