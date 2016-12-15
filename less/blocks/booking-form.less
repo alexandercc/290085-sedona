@@ -4,6 +4,10 @@
 
 .booking-form__title {
   .body-font-title();
+
+  @media @tablet {
+    .body-font-title-max();
+  }
 }
 
 .booking-form__description {
@@ -17,4 +21,9 @@
   text-decoration: none;
   display: inline-block;
   margin: 20px;
+
+  @media @tablet {
+    width: 458px;
+    margin: 20px auto;
+  }
 }
