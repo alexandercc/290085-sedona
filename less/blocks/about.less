@@ -1,0 +1,47 @@
+.about {
+
+}
+
+.about__header {
+  height: 389px;
+  background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
+  background-size: cover, 90%, auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__slogan {
+  img {
+    width: 320px;
+  }
+}
+
+.about__content {
+  display: block;
+  width: 280px;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 648px;
+    padding: 40px 60px 40px 60px;
+  }
+
+  @media @desktop {
+    width: 800px;
+    padding: 40px 60px 40px 60px;
+  }
+}
+
+.about__content-title {
+  .body-font-title();
+  color: @black-color;
+}
+
+.about__content-intro {
+  .body-font();
+  color: @black-color;
+}
