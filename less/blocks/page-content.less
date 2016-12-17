@@ -7,11 +7,23 @@
   height: 158px;
   background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
   background-size: 100%;
+
+  @media @tablet {
+    height: 292px;
+  }
 }
 
 .page-content__intro-text {
   content: ' ';
   background: url('../img/text-sedona.svg') no-repeat center;
   height: 100%;
-  background-size: 100%;
+  background-size: 45%;
+
+  @media @tablet {
+    background-size: 55%;
+  }
+
+  @media @desktop {
+    background-size: 35%;
+  }
 }

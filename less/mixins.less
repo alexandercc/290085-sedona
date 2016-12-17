@@ -5,6 +5,13 @@
   text-transform: uppercase;
 }
 
+.body-font-bold() {
+  font-family: @font-name;
+  font-size: @body-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .body-font-title() {
   font-family: @font-name;
   font-size: @body-font-size-big;
@@ -31,4 +38,10 @@
   font-size: @body-font-size-max-big;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.clearfix() {
+  content: ' ';
+  display: table;
+  clear: both;
 }
