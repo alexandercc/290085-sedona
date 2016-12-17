@@ -39,6 +39,14 @@
 .about__content-title {
   .body-font-title();
   color: @black-color;
+  max-width: 280px;
+  margin: 0 auto 35px auto;
+
+  @media @tablet {
+    .body-font-extra();
+    // max-width: 648px;
+    max-width: 628px;
+  }
 }
 
 .about__content-intro {

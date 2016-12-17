@@ -1,17 +1,25 @@
 .booking-form {
   text-align: center;
+  max-width: 458px;
+  margin: 0 auto;
 }
 
 .booking-form__title {
   .body-font-title();
 
   @media @tablet {
+    margin-top: 60px;
+    margin-bottom: 30px;
     .body-font-title-max();
   }
 }
 
 .booking-form__description {
   .body-font();
+
+  @media @tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .booking-form__find-hotel {
@@ -21,9 +29,11 @@
   text-decoration: none;
   display: inline-block;
   margin: 20px;
+  margin-bottom: 50px;
 
   @media @tablet {
     width: 458px;
     margin: 20px auto;
+    margin-bottom: 50px;
   }
 }
