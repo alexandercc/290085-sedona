@@ -6,20 +6,72 @@
 .feedback__title {
   .body-font-title();
   color: @black-color;
+
+  @media @tablet {
+    .body-font-title-max();
+  }
 }
 
 .feedback__title-description {
   .body-font();
   color: @black-color;
+  max-width: 300px;
+  margin: 0 auto 40px;
 }
 
 .feedback__items {
 
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  label {
+    .body-font();
+    color: @black-color;
+    white-space: nowrap;
+  }
+
+  input[type=text], input[type=email], input[type=tel],
+  textarea {
+    &::placeholder {
+      .body-font-title();
+      color: @black-color;
+      text-transform: none;
+    }
+
+    box-sizing: border-box;
+    padding: 16px 20px;
+    border: none;
+    background-color: @grey-color;
+    color: @black-color;
+    text-transform: none;
+  }
+
+  textarea {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  input[type=radio] {
+
+  }
+
+  input[type=checkbox] {
+
+  }
 }
 
 .feedback__item {
   text-align: center;
-  padding: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @grey-color;
+
+  label {
+    .body-font();
+    color: @black-color;
+  }
 }
 
 .feedback__item-title {
@@ -38,9 +90,66 @@
   margin: 20px auto;
 }
 
-.feedback__item {
-  label {
-    .body-font();
-    color: @black-color;
+.feedback-fieldset-impression {
+  @media @tablet {
+    order: 0;
+    width: 50%;
+    padding-top: 0;
+    border: none;
+  }
+}
+
+.feedback-fieldset-name {
+  @media @tablet {
+    order: 1;
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 40px;
+    border: none;
+  }
+}
+
+.feedback-fieldset-contact {
+  @media @tablet {
+    order: 2;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding-top: 0;
+  }
+
+  @media @desktop {
+    div:nth-child(2) {
+      float: left;
+      width: 50%;
+    }
+
+    div:nth-child(1) {
+      float: right;
+      width: 50%;
+    }
+  }
+}
+
+.feedback-fieldset-showplace {
+  @media @tablet {
+    order: 3;
+    width: 100%;
+    margin: 0 auto 35px auto;
+    padding-top: 0;
+  }
+
+  @media @desktop {
+    .feedback__item-wrapper {
+      float: left;
+      width: 25%;
+    }
+  }
+}
+
+.feedback-fieldset-emotion {
+  @media @tablet {
+    order: 4;
+    width: 100%;
+    margin-bottom: 60px;
   }
 }

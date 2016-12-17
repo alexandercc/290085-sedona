@@ -54,7 +54,7 @@
 
         <form>
           <div class="feedback__items">
-            <fieldset class="feedback__item">
+            <fieldset class="feedback__item  feedback-fieldset-name">
               <h2 class="feedback__item-title">Представьтесь:</h2>
               <div>
                 <label for="firstname">Имя*:</label>
@@ -72,7 +72,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="feedback__item">
+            <fieldset class="feedback__item  feedback-fieldset-contact">
               <h2 class="feedback__item-title">Контактная информация:</h2>
               <div>
                 <label for="phone">Контактный телефон*:</label>
@@ -85,29 +85,43 @@
               </div>
             </fieldset>
 
-            <fieldset class="feedback__item">
+            <fieldset class="feedback__item  feedback-fieldset-impression">
               <h2 class="feedback__item-title">Ваше общее впечатление:</h2>
               <div>
-                <input type="radio" checked="checked" name="impression" id="positive"> <label for="positive">Скорее положительные</label>
-                <input type="radio" name="impression" id="negative"> <label for="negative">Скорее отрицательные</label>
-                <input type="radio" name="impression" id="neutral"> <label for="neutral">Затрудняюсь ответить</label>
+                <div class="feedback__item-wrapper">
+                  <input type="radio" checked="checked" name="impression" id="positive"> <label for="positive">Скорее положительные</label>
+                </div>
+                <div class="feedback__item-wrapper">
+                  <input type="radio" name="impression" id="negative"> <label for="negative">Скорее отрицательные</label>
+                </div>
+                <div class="feedback__item-wrapper">
+                  <input type="radio" name="impression" id="neutral"> <label for="neutral">Затрудняюсь ответить</label>
+                </div>
               </div>
             </fieldset>
 
-            <fieldset class="feedback__item">
+            <fieldset class="feedback__item  feedback-fieldset-showplace">
               <h2 class="feedback__item-title">Посещенные достопримечательности:</h2>
               <div>
-                <input type="checkbox" checked="checked" name="showplace[]" id="bridge"> <label for="bridge">Мост Дьявола</label>
-                <input type="checkbox" checked="checked" name="showplace[]" id="park"> <label for="park">Слайд-парк</label>
-                <input type="checkbox" name="showplace[]" id="mountain"> <label for="mountain">Гора-Колокол</label>
-                <input type="checkbox" name="showplace[]" id="rock"> <label for="rock">Красные скалы</label>
+                <div class="feedback__item-wrapper">
+                  <input type="checkbox" checked="checked" name="showplace[]" id="bridge"> <label for="bridge">Мост Дьявола</label>
+                </div>
+                <div class="feedback__item-wrapper">
+                  <input type="checkbox" checked="checked" name="showplace[]" id="park"> <label for="park">Слайд-парк</label>
+                </div>
+                <div class="feedback__item-wrapper">
+                  <input type="checkbox" name="showplace[]" id="mountain"> <label for="mountain">Гора-Колокол</label>
+                </div>
+                <div class="feedback__item-wrapper">
+                  <input type="checkbox" name="showplace[]" id="rock"> <label for="rock">Красные скалы</label>
+                </div>
               </div>
             </fieldset>
 
-            <fieldset class="feedback__item">
+            <fieldset class="feedback__item  feedback-fieldset-emotion">
               <h2 class="feedback__item-title">Опишите свои эмоции:</h2>
 
-              <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
               <input type="submit" class="feedback__send  btn" value="Отправить отзыв">
             </fieldset>
           </div>
