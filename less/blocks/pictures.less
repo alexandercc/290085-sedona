@@ -1,5 +1,12 @@
 .pictures {
   text-align: center;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .pictures__title {
@@ -166,8 +173,32 @@
 }
 
 .pictures__video {
-  padding-left: 60px;
-  padding-right: 60px;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+
+  @media @tablet {
+    width: 100%;
+  }
+
+  img {
+    width: 320px;
+    height: 200px;
+  }
+
+  @media @tablet {
+    img {
+      width: 648px;
+      height: 500px;
+    }
+  }
+
+  @media @desktop {
+    img {
+      width: 800px;
+      height: 500px;
+    }
+  }
 }
 
 .pictures__video-title {
@@ -182,5 +213,7 @@
 .pictures__video-description {
   .body-font();
   color: @black-color;
-  margin-bottom: 70px;
+  max-width: 260px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
