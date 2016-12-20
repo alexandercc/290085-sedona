@@ -1,6 +1,8 @@
 .feedback {
   text-align: center;
-  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 37px;
 }
 
 .feedback__title {
@@ -20,6 +22,8 @@
 }
 
 .feedback__items {
+  max-width: 650px;
+  margin: 0 auto;
 
   @media @tablet {
     display: flex;
@@ -33,8 +37,7 @@
     white-space: nowrap;
   }
 
-  input[type=text], input[type=email], input[type=tel],
-  textarea {
+  input[type=text], input[type=email], input[type=tel], textarea {
     &::placeholder {
       .body-font-title();
       color: @black-color;
@@ -47,6 +50,7 @@
     background-color: @grey-color;
     color: @black-color;
     text-transform: none;
+    flex: 1 1 0;
   }
 
   textarea {
@@ -65,18 +69,38 @@
 
 .feedback__item {
   text-align: center;
-  padding-top: 20px;
   border-top: 1px solid @grey-color;
+  box-sizing: border-box;
+  margin: 20px 0 20px;
+  padding: 0 20px 5px;
 
   label {
     .body-font();
     color: @black-color;
+    margin-right: 14px;
+    padding: 0 0 10px;
   }
 }
 
 .feedback__item-title {
   .body-font-title();
   color: @black-color;
+}
+
+.feedback__item-meeting {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.feedback__item-contact {
+  display: block;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 22px;
+  position: relative;
 }
 
 .feedback__send {
