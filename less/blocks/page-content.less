@@ -4,14 +4,47 @@
 
 .page-content__intro {
   display: block;
+  width: 320px;
   height: 158px;
-  background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
-  background-size: 100%;
+  margin: 0 auto;
+  background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center bottom / cover,
+    url('../img/bg-back-mobile@1x.jpg') no-repeat center bottom;
+  box-sizing: border-box;
+  padding-top: 50px;
+  text-align: center;
+
+  @media @tablet {
+    width: 768px;
+    height: 292px;
+    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center bottom / contain,
+    url('../img/bg-back-mobile@1x.jpg') no-repeat center bottom;
+    padding-top: 95px;
+  }
+
+  @media @desktop {
+    width: 1200px;
+    height: 300px;
+    background: url('../img/bg-intro-triangle-mobile.svg') no-repeat center bottom,
+    url('../img/bg-back-mobile@1x.jpg') no-repeat center bottom;
+    padding-top: 100px;
+  }
 }
 
 .page-content__intro-text {
   content: ' ';
   background: url('../img/text-sedona.svg') no-repeat center;
-  height: 100%;
   background-size: 100%;
+  height: 40px;
+  width: 228px;
+  margin: 0 auto;
+
+  @media @tablet {
+    height: 79px;
+    width: 460px;
+  }
+
+  @media @desktop {
+    height: 79px;
+    width: 460px;
+  }
 }

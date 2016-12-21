@@ -4,17 +4,43 @@
 
 .about__header {
   height: 389px;
-  background: url('../img/bg-back-mobile@1x.jpg') no-repeat center;
-  background-size: cover, 90%, auto;
+  width: 320px;
+  margin: 0 auto;
+  background: url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom / cover,
+      url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+  box-sizing: border-box;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media @tablet {
+    height: 520px;
+    width: 768px;
+
+    background: url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom / contain,
+    url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+  }
+
+  @media @desktop {
+    width: 1200px;
+
+    background: url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom / contain,
+    url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+  }
 }
 
 .about__slogan {
-  img {
-    width: 320px;
+  height: 215px;
+  width: 280px;
+  margin: 0 auto;
+  background: url(../img/text-sedona-index.svg) no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+
+  @media @tablet {
+    height: 350px;
+    width: 468px;
   }
 }
 
@@ -39,6 +65,14 @@
 .about__content-title {
   .body-font-title();
   color: @black-color;
+  max-width: 280px;
+  margin: 0 auto 35px auto;
+
+  @media @tablet {
+    .body-font-extra();
+    // max-width: 648px;
+    max-width: 628px;
+  }
 }
 
 .about__content-intro {

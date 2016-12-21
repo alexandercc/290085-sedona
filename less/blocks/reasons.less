@@ -10,15 +10,43 @@
   text-align: center;
 }
 
+.reasons__block {
+  &--selected {
+    background-color: @button-color;
+    color: @white-color;
+  }
+
+  @media @tablet {
+
+  }
+}
+
 .reasons__intro {
   display: block;
-  height: 192px;
+  padding: 40px 20px;
+
+  @media @tablet {
+    &--first {
+      width: 33%;
+      float: left;
+      padding: 40px 0;
+    }
+
+    &--second {
+      width: 33%;
+      float: right;
+      padding: 40px 0;
+    }
+  }
 }
 
 .reasons__title {
   .body-font-title();
+  margin: 0 auto;
+  margin-bottom: 15px;
 
   @media @tablet {
+    max-width: 180px;
     .body-font-extra();
   }
 }
@@ -29,14 +57,30 @@
 
 .reasons__title-description {
   .body-font();
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .reasons__main-picture {
-  display: block;
-  width: 320px;
+  //display: block;
+  height: 260px;
+
+  @media @tablet {
+    &--first {
+      width: 67%;
+      float: right;
+    }
+
+    &--second {
+      width: 67%;
+      float: left;
+    }
+  }
 
   img {
-    width: 320px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -45,15 +89,44 @@
 }
 
 .reasons__advantage-item {
+  padding: 20px;
+  width: 260px;
+  margin: 0 auto;
 
+  @media @tablet {
+    width: 33%;
+    float: left;
+    padding: 20px 0;
+  }
 }
 
 .reasons__advantage-logo {
+  float: left;
 
+  @media @tablet {
+    margin-top: 40px;
+    float: none;
+  }
+}
+
+.reasons__advantage-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+
+  @media @tablet {
+    display: inline-block;
+  }
 }
 
 .reasons__advantage-text {
+  margin-left: 60px;
+  text-align: left;
 
+  @media @tablet {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .reasons__advantage-title {
@@ -63,15 +136,32 @@
 
 .reasons__advantage-title-description {
   .body-font();
+  display: block;
+  margin: 0 auto;
   color: @black-color;
+  max-width: 200px;
 }
 
 .reasons__reason-two {
   text-align: center;
 }
 
-.reasons__reason-closed {
+.reasons__reason-third {
+  text-align: center;
+  background-color: @grey-color;
+}
 
+.reasons__reason-closed {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 30px;
+  background-color: @grey-color;
+
+  @media @tablet {
+    width: 33%;
+    float: left;
+    padding: 20px 0;
+  }
 }
 
 .reasons__intro-closed {
@@ -94,4 +184,6 @@
 
 .reasons__title-description-closed {
   .body-font();
+  max-width: 220px;
+  margin: 0 auto;
 }

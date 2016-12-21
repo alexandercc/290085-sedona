@@ -1,30 +1,269 @@
 .feedback {
   text-align: center;
-  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 37px;
+
+  @media @tablet {
+    width: 768px;
+  }
+
+  @media @desktop {
+    width: 1200px;
+  }
 }
 
 .feedback__title {
   .body-font-title();
   color: @black-color;
+
+  @media @tablet {
+    .body-font-title-max();
+  }
 }
 
 .feedback__title-description {
   .body-font();
   color: @black-color;
+  max-width: 300px;
+  margin: 0 auto 40px;
 }
 
 .feedback__items {
+  max-width: 650px;
+  margin: 0 auto;
 
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  @media @desktop {
+    max-width: 960px;
+  }
+
+  label {
+    .body-font();
+    color: @black-color;
+    white-space: nowrap;
+  }
+
+  input[type=text], input[type=email], input[type=tel], textarea {
+    &::placeholder {
+      .body-font-title();
+      color: @black-color;
+      text-transform: none;
+    }
+
+    box-sizing: border-box;
+    padding: 20px;
+    border: none;
+    background-color: @grey-color;
+    color: @black-color;
+    text-transform: none;
+    flex: 1 1 0;
+  }
+
+  textarea {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  input[type=radio] {
+
+  }
+
+  input[type=checkbox] {
+
+  }
 }
 
 .feedback__item {
   text-align: center;
-  padding: 20px;
+  border-top: 1px solid @grey-color;
+  box-sizing: border-box;
+  margin: 20px 0 20px;
+  padding: 0 20px 5px;
+
+  label {
+    .body-font();
+    color: @black-color;
+    margin-right: 14px;
+    padding: 0 0 10px;
+  }
 }
 
 .feedback__item-title {
   .body-font-title();
   color: @black-color;
+}
+
+.feedback__item-meeting {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.feedback__item-contact-phone {
+  input {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  @media @tablet {
+    flex: 1 1 50%;
+  }
+
+  @media @desktop {
+    padding-right: 80px;
+    display: inherit;
+    box-sizing: border-box;
+    flex: 1 1 50%;
+
+    label {
+      display: inherit;
+      padding-left: 0;
+    }
+  }
+}
+
+.feedback__item-contact-phone-wrapper {
+  display: block;
+  flex: 1;
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after {
+    background: @grey-button-color url('../img/icon-phone.svg') no-repeat center;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 58px;
+    width: 58px;
+  }
+}
+
+.feedback__item-contact-email {
+  input {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  @media @tablet {
+    flex: 1 1 50%;
+  }
+
+  @media @desktop {
+    display: inherit;
+    box-sizing: border-box;
+    flex: 1 1 50%;
+
+    label {
+      display: inherit;
+      padding-left: 0;
+    }
+  }
+}
+
+.feedback__item-contact-email-wrapper {
+  display: block;
+  flex: 1;
+  position: relative;
+  margin-top: 15px;
+
+  &::after {
+    background: @grey-button-color url('../img/icon-mail.svg') no-repeat center;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 58px;
+    width: 58px;
+  }
+
+  @media @desktop {
+    margin-top: 0;
+  }
+}
+
+.feedback__item-wrapper input[type=radio] {
+  display: none;
+}
+
+.feedback__item-wrapper input[type=radio]:checked + label:before {
+  background-color: @black-color;
+}
+
+.feedback__item-wrapper input[type=radio] + label {
+  .body-font();
+  display: block;
+  width: 100%;
+
+  &::before {
+    background-color: @grey-light-color;
+    border: 18px solid @grey-light-color;
+    border-radius: 80px;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+    width: 21px;
+  }
+}
+
+.feedback__item-impression {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+
+  @media @tablet {
+    flex: 1 1 50%;
+  }
+}
+
+.feedback__item-wrapper input[type=checkbox] {
+  display: none;
+}
+
+.feedback__item-wrapper input[type=checkbox]:checked + label:before {
+  background: @grey-light-color url('../img/icon-tick.svg') no-repeat center;
+}
+
+.feedback__item-wrapper input[type=checkbox] + label {
+  .body-font-bold();
+  display: block;
+  width: 100%;
+  text-transform: none;
+
+  &::before {
+    background-color: @grey-light-color;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    height: 55px;
+    width: 55px;
+  }
 }
 
 .feedback__send {
@@ -38,9 +277,109 @@
   margin: 20px auto;
 }
 
-.feedback__item {
-  label {
-    .body-font();
-    color: @black-color;
+.feedback__error {
+  .body-font();
+  color: @red-error-color;
+  text-transform: none;
+  display: block;
+  padding-left: 20px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.feedback-fieldset-name {
+  @media @tablet {
+    order: 1;
+    flex-basis: 49%;
+    padding-top: 0;
+    padding-bottom: 40px;
+    border: none;
+  }
+}
+
+.feedback-fieldset-contact {
+  @media @tablet {
+    order: 2;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding-top: 0;
+  }
+}
+
+.feedback__item-contact-wrapper {
+  @media @desktop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.feedback-fieldset-showplace {
+  @media @tablet {
+    order: 3;
+    width: 100%;
+    margin: 0 auto 35px auto;
+    padding-top: 0;
+  }
+
+  @media @desktop {
+    flex: 1 1 100%;
+  }
+}
+
+.feedback-fieldset-emotion {
+  @media @tablet {
+    order: 4;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.feedback-fieldset-impression {
+  text-align: left;
+
+  @media @tablet {
+    order: 0;
+    flex-basis: 49%;
+    padding-top: 0;
+    border: none;
+  }
+}
+
+.feedback-fieldset-impression-wrapper {
+
+}
+
+.feedback-fieldset-showplace-wrapper {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 518px;
+  margin: 24px auto 0;
+
+  div {
+    box-sizing: border-box;
+  }
+
+  @media @desktop {
+    justify-content: space-between;
+    max-width: 100%;
+    margin-top: 21px;
+
+    div {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+.feedback__item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+
+  @media @tablet {
+    flex: 1 1 50%;
   }
 }
