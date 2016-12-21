@@ -45,7 +45,7 @@
     }
 
     box-sizing: border-box;
-    padding: 16px 20px;
+    padding: 20px;
     border: none;
     background-color: @grey-color;
     color: @black-color;
@@ -95,12 +95,84 @@
   position: relative;
 }
 
-.feedback__item-contact {
+.feedback__item-contact-phone {
+  &::after {
+    background: @grey-button-color url('../img/icon-phone.svg') no-repeat center;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 58px;
+    width: 58px;
+  }
+}
+
+.feedback__item-contact-email {
+  &::after {
+    background: @grey-button-color url('../img/icon-mail.svg') no-repeat center;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 58px;
+    width: 58px;
+  }
+}
+
+.feedback__item-wrapper input[type=radio] {
+  display: none;
+}
+
+.feedback__item-wrapper input[type=radio]:checked + label:before {
+  background-color: @black-color;
+}
+
+.feedback__item-wrapper input[type=radio] + label {
+  .body-font();
   display: block;
+  width: 100%;
+
+  &::before {
+    background-color: @grey-light-color;
+    border: 18px solid @grey-light-color;
+    border-radius: 80px;
+    content: '';
+    display: inline-block;
+    height: 21px;
+    margin: 0 20px 0 0;
+    vertical-align: middle;
+    width: 21px;
+  }
+}
+
+.feedback__item-impression {
+  display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-bottom: 22px;
   position: relative;
+}
+
+.feedback__item-wrapper input[type=checkbox] {
+  display: none;
+}
+
+.feedback__item-wrapper input[type=checkbox]:checked + label:before {
+  background: @grey-light-color url('../img/icon-tick.svg') no-repeat center;
+}
+
+.feedback__item-wrapper input[type=checkbox] + label {
+  .body-font-bold();
+  display: block;
+  width: 100%;
+  text-transform: none;
+
+  &::before {
+    background-color: @grey-light-color;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    height: 55px;
+    width: 55px;
+  }
 }
 
 .feedback__send {
