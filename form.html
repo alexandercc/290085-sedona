@@ -76,7 +76,8 @@
               <h2 class="feedback__item-title">Контактная информация:</h2>
               <div class="feedback__item-contact-wrapper">
                 <div class="feedback__item-contact-phone">
-                  <label for="phone">Контактный телефон*:</label>
+                  <label for="phone" class="feedback__item-contact-phone-label-usual">Контактный телефон*:</label>
+                  <label for="phone" class="feedback__item-contact-phone-label-nonusual">Телефон*:</label>
                   <span class="feedback__item-contact-phone-wrapper">
                     <input type="tel" placeholder="Введите телефон" required="required" id="phone" name="phone">
                   </span>
@@ -129,7 +130,13 @@
               <h2 class="feedback__item-title">Опишите свои эмоции:</h2>
 
               <textarea placeholder="Опишите подробно все свои восторги" rows="5"></textarea>
-              <input type="submit" class="feedback__send  btn" value="Отправить отзыв">
+
+              <div class="feedback__item-note">
+                <input type="submit" class="feedback__send  btn" value="Отправить отзыв">
+
+                <div class="feedback__note"><span><sup>*</sup> - Обязательные поля</span></div>
+              </div>
+
             </fieldset>
           </div>
         </form>
