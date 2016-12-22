@@ -50,6 +50,7 @@
   padding: 40px 20px 20px 20px;
   text-align: center;
   margin: 0 auto;
+  position: relative;
 
   @media @tablet {
     width: 648px;
@@ -78,4 +79,14 @@
 .about__content-intro {
   .body-font();
   color: @black-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: url('../img/bg-triangle.svg') no-repeat center;
+  }
 }
