@@ -63,6 +63,24 @@
 
   }
 
+  &:hover {
+    background-color: @button-hover-color;
+  }
+
+  @media @tablet {
+    &:hover {
+      background-color: @white-color;
+    }
+
+    &:hover {
+      color: @button-color;
+    }
+
+    a:hover {
+      color: @button-color;
+    }
+  }
+
   @media @tablet {
     .body-font-bold();
     display: inline-block;
