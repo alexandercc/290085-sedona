@@ -152,22 +152,35 @@
 }
 
 .reasons__reason-closed {
-  width: 320px;
   margin: 0 auto;
-  padding: 30px 30px;
   background-color: @grey-color;
+  margin-right: 20px;
+  margin-left: 20px;
 
   @media @tablet {
     width: 33%;
     float: left;
     padding: 20px 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
 .reasons__intro-closed {
   display: block;
-  height: 168px;
+  height: 133px;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @border-closed-reason-color;
+
+  &--last {
+    border-bottom: none;
+  }
+
+  @media @tablet {
+    border-bottom: none;
+  }
 }
 
 .reasons__title-closed {
