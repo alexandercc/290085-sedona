@@ -90,22 +90,55 @@
   margin-right: auto;
   width: 16px;
   height: 20px;
-  background-image: url('../img/icon-video-replay.svg');
+  fill: @repeat-color;
 
   @media @tablet {
     order: -1;
     margin: 0 42px 0 0;
+    fill: @white-color;
+  }
+
+  &:hover {
+    fill: @repeat-hover-color;
+  }
+
+  &:active {
+    fill: @repeat-active-color;
   }
 }
 
 .video-player__video-subtitle_off {
   width: 32px;
   height: 20px;
-  background-image: url('../img/icon-video-subtitles.svg');
+  fill: @repeat-color;
+
+  @media @tablet {
+    fill: @white-color;
+  }
+
+  &:hover {
+    fill: @repeat-hover-color;
+  }
+
+  &:active {
+    fill: @repeat-active-color;
+  }
 }
 
 .video-player__video-fullscreen_off {
   width: 20px;
   height: 20px;
-  background-image: url('../img/icon-video-fullscreen.svg');
+  fill: @repeat-color;
+
+  @media @tablet {
+    fill: @white-color;
+  }
+
+  &:hover {
+    fill: @repeat-hover-color;
+  }
+
+  &:active {
+    fill: @repeat-active-color;
+  }
 }
