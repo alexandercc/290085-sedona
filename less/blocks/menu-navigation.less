@@ -73,6 +73,10 @@
   }
 
   @media @tablet {
+    a {
+      color: @black-color;
+    }
+
     &:hover {
       background-color: @white-color;
     }
@@ -84,6 +88,22 @@
     a:hover {
       color: @button-color;
     }
+
+    a:active {
+      color: @font-active-color-tablet
+    }
+
+    &--active a {
+      color: @font-current-color-tablet;
+    }
+
+    &--active a:hover {
+      color: @font-current-hover-color-tablet;
+    }
+
+    &--active a:active {
+      color: @font-current-active-color-tablet;
+    }
   }
 
   @media @tablet {
@@ -92,10 +112,6 @@
 
     &:nth-child(3) {
       display: inline-block;
-    }
-
-    a {
-      color: @black-color;
     }
 
     width: 19%;
