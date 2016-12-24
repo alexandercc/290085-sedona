@@ -67,6 +67,22 @@
     @media @tablet {
       .body-font-title();
     }
+
+    &:hover {
+      background-color: @input-hover-color;
+    }
+
+    &:focus, &:active {
+      border: 4px solid @input-border-focus-color;
+      background-color: @white-color;
+      padding: 14px;
+    }
+  }
+
+  input[type=tel], input[type=email] {
+    @media @tablet {
+      padding: 18px;
+    }
   }
 
   textarea {
@@ -236,6 +252,11 @@
   background-color: @black-color;
 }
 
+.feedback__item-wrapper input[type=radio]:checked + label:active:before {
+  background-color: @input-active-bg-radio-color;
+  border-color: @input-active-checkbox-color;
+}
+
 .feedback__item-wrapper input[type=radio] + label {
   .body-font-bold();
   text-transform: none;
@@ -243,8 +264,8 @@
   width: 100%;
 
   &::before {
-    background-color: @grey-light-color;
-    border: 18px solid @grey-light-color;
+    background-color: @input-checkbox-color;
+    border: 18px solid @input-checkbox-color;
     border-radius: 80px;
     content: '';
     display: inline-block;
@@ -252,6 +273,16 @@
     margin: 0 20px 0 0;
     vertical-align: middle;
     width: 21px;
+  }
+
+  &:hover::before {
+    background-color: @input-hover-checkbox-color;
+    border-color: @input-hover-checkbox-color;
+  }
+
+  &:active::before {
+    background-color: @input-active-checkbox-color;
+    border-color: @input-active-checkbox-color;
   }
 
   @media @tablet {
@@ -276,7 +307,11 @@
 }
 
 .feedback__item-wrapper input[type=checkbox]:checked + label:before {
-  background: @grey-light-color url('../img/icon-tick.svg') no-repeat center;
+  background: @input-checkbox-color url('../img/icon-tick.svg') no-repeat center;
+}
+
+.feedback__item-wrapper input[type=checkbox]:checked + label:active:before {
+  background: @input-active-checkbox-color url('../img/icon-tick-grey.svg') no-repeat center;
 }
 
 .feedback__item-wrapper input[type=checkbox] + label {
@@ -286,13 +321,21 @@
   text-transform: none;
 
   &::before {
-    background-color: @grey-light-color;
+    background-color: @input-checkbox-color;
     content: '';
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
     height: 55px;
     width: 55px;
+  }
+
+  &:hover::before {
+    background-color: @input-hover-checkbox-color;
+  }
+
+  &:active::before {
+    background-color: @input-active-checkbox-color;
   }
 
   @media @tablet {
